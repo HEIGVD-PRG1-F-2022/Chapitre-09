@@ -12,3 +12,4 @@ FetchContent_Declare(libdio
 FetchContent_MakeAvailable(libdio)
 
 add_subdirectory(Exo_6_4_5)
+add_subdirectory(Exo_6_10)
