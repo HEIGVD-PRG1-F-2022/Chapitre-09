@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.23)
-project(Chapitre06)
+project(Chapitre09)
 
 set(CMAKE_CXX_STANDARD 20)
 
@@ -11,5 +11,4 @@ FetchContent_Declare(libdio
         )
 FetchContent_MakeAvailable(libdio)
 
-add_subdirectory(Exo_6_4_5)
-add_subdirectory(Exo_6_10)
+add_subdirectory(Exo_9_5)
