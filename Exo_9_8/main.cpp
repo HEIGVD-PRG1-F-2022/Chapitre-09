@@ -10,12 +10,12 @@ class Identite {
 public:
   Identite() = default;
 
-  Identite(const string &prenom, const string &nom):prenom(prenom), nom(nom){
-    if (prenom.empty()){
+  Identite(const string &prenom, const string &nom) : prenom(prenom), nom(nom) {
+    if (prenom.empty()) {
       throw invalid_argument("Exception survenue dans Identite::Identite():\n"
                              "prenom ne peut pas etre une chaine vide.");
     }
-    if (nom.empty()){
+    if (nom.empty()) {
       throw invalid_argument("Exception survenue dans Identite::Identite():\n"
                              "nom ne peut pas etre une chaine vide.");
     }
@@ -25,25 +25,22 @@ public:
   [[nodiscard]] string toString() const { return prenom + " " + nom; }
 
 private:
-  string prenom;
-  string nom;
+  const string prenom;
+  const string nom;
 };
 
 class Personne {
 public:
-  Personne(const string &prenom, const string &nom){
-    try {
-      identite = Identite(prenom, nom);
-    } catch (invalid_argument &arg){
-      cout << arg.what() << endl;
-      cout << "Exception survenue dans Personne::Personne()." << endl;
-      throw;
-    }
+  Personne(const string &prenom, const string &nom) try
+      : identite(prenom, nom) {
     cout << "Dans Personne::Personne(): " << this->identite.toString() << endl;
+  } catch (invalid_argument &arg) {
+    cout << arg.what() << endl;
+    cout << "Exception survenue dans Personne::Personne()." << endl;
   }
 
 private:
-  Identite identite;
+  const Identite identite;
 };
 
 int main() {
