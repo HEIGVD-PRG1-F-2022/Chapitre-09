@@ -1,4 +1,4 @@
-// Fichier pour l'exercice 5 du chapitre 9.
+// Fichier pour l'exercice 7 du chapitre 9.
 #include <cstdlib>
 #include <iostream>
 #include <stdexcept>

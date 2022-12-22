@@ -1,4 +1,4 @@
-// Fichier pour l'exercice 5 du chapitre 9.
+// Fichier pour l'exercice 8 du chapitre 9.
 #include <cstdlib>
 #include <iostream>
 #include <stdexcept>
@@ -8,7 +8,7 @@ using namespace std;
 
 class Identite {
 public:
-  Identite() = default;
+//  Identite() = default;
 
   Identite(const string &prenom, const string &nom) : prenom(prenom), nom(nom) {
     if (prenom.empty()) {
